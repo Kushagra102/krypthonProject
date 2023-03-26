@@ -1,4 +1,3 @@
-
 import React from 'react'
 import { View, TextInput } from 'react-native';
 import { MagnifyingGlassIcon, AdjustmentsVerticalIcon } from 'react-native-heroicons/outline'

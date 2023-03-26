@@ -28,11 +28,13 @@ export default function App({ navigate }) {
     return null;
   }
 
-  return (
+  return <>
     <SafeAreaView className="bg-{#F1F6FA} pt-4">
-        <BackButton tabName='Patients' />
-        <SearchBar />
-        <ScrollView>
+      <BackButton tabName='Patients' />
+      <SearchBar />
+    </SafeAreaView>
+    <View>
+      <ScrollView>
 
 
         <View className="flex flex-row justify-between mx-10 py-3 items-center">
@@ -40,7 +42,7 @@ export default function App({ navigate }) {
           <Text className="text-[15px]" style={{ fontFamily: 'Poppins-Regular' }}>Clinic</Text>
           <Text className="text-[15px]" style={{ fontFamily: 'Poppins-Regular' }}>Hospital #1</Text>
           <Text className="text-[15px]" style={{ fontFamily: 'Poppins-Regular' }}>Hospital #2</Text>
-        
+
         </View>
 
         <View className="flex flex-row justify-between mx-5 py-3 items-center">
@@ -71,8 +73,8 @@ export default function App({ navigate }) {
           onPress={() => navigation.navigate('AddPatient')}
         />
       </ScrollView>
-    </SafeAreaView>
-  );
+    </View>
+  </>
 };
 
 
