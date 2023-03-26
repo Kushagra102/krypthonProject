@@ -28,7 +28,7 @@ export default function App() {
   }
 
 
-  return (
+  return <>
     <SafeAreaView className="bg-{#F1F6FA} pt-4">
       {/* Header */}
       <ScrollView>
