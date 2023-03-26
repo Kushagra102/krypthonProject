@@ -1,9 +1,8 @@
-import { View, Text, Image, TextInput, ScrollView } from 'react-native'
+import { View, Text, Image, TextInput, ScrollView ,Button } from 'react-native'
 import React, { useLayoutEffect } from 'react'
 import { useNavigation } from '@react-navigation/native'
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { ChevronDownIcon, UserIcon, MagnifyingGlassIcon, AdjustmentsVerticalIcon } from 'react-native-heroicons/outline'
-
 
 export default function App() {
   const navigation = useNavigation();
@@ -13,7 +12,8 @@ export default function App() {
           headerShown: false,
       })
   }, [])
-  return (
+  
+  return <>
     <SafeAreaView className="bg-white pt-4">
       {/* Header */}
       <View className="flex-row pb-3 items-center mx-4 space-x-2">
@@ -37,6 +37,13 @@ export default function App() {
         <AdjustmentsVerticalIcon color="#00CCBB" />
       </View>
     </SafeAreaView>
-  );
+
+
+    
+    <Button
+        title="Go to Profile"
+        onPress={() => navigation.navigate('Profile')}
+      />
+    </>;
 };
 

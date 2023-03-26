@@ -4,18 +4,20 @@ import { Text, View } from 'react-native'
 import { NativeWindStyleSheet } from "nativewind";
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { AntDesign } from '@expo/vector-icons';
+
 
 
 NativeWindStyleSheet.setOutput({
   default: "native",
 });
 
-const Stack = createNativeStackNavigator();
-
 import Home from "./screens/Home"
 import Profile from "./screens/Profile"
-import Appointments from "./screens/Appointment"
-import AddAppointments from "./screens/AddAppointment"
+import Appointment from "./screens/Appointment"
+import AddAppointment from "./screens/AddAppointment"
 import Patient from "./screens/Patient"
 import AddPatient from "./screens/AddPatient"
 import History from "./screens/History"
@@ -23,14 +25,101 @@ import Critical from "./screens/Critcal"
 import CriticalProfile from "./screens/CriticalProfile"
 
 
+const HomeStack = createNativeStackNavigator();
+function HomeStackScreen() {
+  return (
+    <HomeStack.Navigator>
+    <HomeStack.Screen name="Home" component={Home} />            
+    <HomeStack.Screen name="Profile" component={Profile} />
+    </HomeStack.Navigator>
+  );
+}
+const AppointmentStack = createNativeStackNavigator();
+function AppointmentStackScreen() {
+  return (
+    <AppointmentStack.Navigator>
+    <AppointmentStack.Screen name="Appointment" component={Appointment} />            
+    <AppointmentStack.Screen name="AddAppointment" component={AddAppointment} />
+    <AppointmentStack.Screen name="AddPatient" component={AddPatient} />
+    <AppointmentStack.Screen name="History" component={History} />
+    </AppointmentStack.Navigator>
+  );
+}
+const PatientStack = createNativeStackNavigator();
+function PatientStackScreen() {
+  return (
+    <PatientStack.Navigator>
+    <PatientStack.Screen name="Patient" component={Patient} />            
+    <PatientStack.Screen name="History" component={History} />
+    <PatientStack.Screen name="AddPatient" component={AddPatient} />
+    </PatientStack.Navigator>
+  );
+}
+const CriticalStack = createNativeStackNavigator();
+function CriticalStackScreen() {
+  return (
+    <CriticalStack.Navigator>
+    <CriticalStack.Screen name="Critical" component={Critical} />            
+    <CriticalStack.Screen name="CriticalProfile" component={CriticalProfile} />            
+    </CriticalStack.Navigator>
+  );
+}
+const Tab = createMaterialBottomTabNavigator();
+
 export default function App() {
-  
+
   return (
     <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="Home" component={Home} />
-      </Stack.Navigator>
+    <Tab.Navigator
+      initialRouteName="Home"
+      activeColor="black"
+      labelStyle={{ fontSize: 12 }}
+      style={{ backgroundColor: 'black' }}
+    >
+      <Tab.Screen
+        name="Home"
+        component={HomeStackScreen}
+        options={{
+          tabBarLabel: 'Home',
+          tabBarIcon: ({ color }) => (
+            <AntDesign name="home" size={26} color="{color}" />
+          ),
+        }}
+      />
+        <Tab.Screen 
+          name="Appointments" 
+          component={AppointmentStackScreen}
+          options={{
+            tabBarLabel: 'Appointment',
+            tabBarIcon: ({ color }) => (
+              <AntDesign name="calendar" size={26} color="{color}" />
+            ),
+          }}
+        />
+        <Tab.Screen 
+          name="Patient" 
+          component={PatientStackScreen} 
+          options={{
+          tabBarLabel: 'Patient',
+          tabBarIcon: ({ color }) => (
+            <AntDesign name="addusergroup" size={26} color="{color}" />
+          ),
+        }}
+        />
+        <Tab.Screen 
+          name="Critical" 
+          component={CriticalStackScreen} 
+          options={{
+          tabBarLabel: 'Critical',
+          tabBarIcon: ({ color }) => (
+            <MaterialCommunityIcons name="alert-rhombus-outline" size={26} color="{color}" />
+          ),
+        }}
+        />
+      </Tab.Navigator>
     </NavigationContainer>
   );
 };
+
+
 
