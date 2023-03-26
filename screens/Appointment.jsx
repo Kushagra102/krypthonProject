@@ -6,6 +6,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { AntDesign } from '@expo/vector-icons';
 import { useFonts } from 'expo-font';
 import Date from '../components/Date';
+import card from '../components/card';
 
 
 
