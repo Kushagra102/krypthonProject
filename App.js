@@ -23,14 +23,17 @@ import AddPatient from "./screens/AddPatient"
 import History from "./screens/History"
 import Critical from "./screens/Critcal"
 import CriticalProfile from "./screens/CriticalProfile"
+import EditHistory from "./screens/EditHistory"
 
 
 const HomeStack = createNativeStackNavigator();
 function HomeStackScreen() {
   return (
     <HomeStack.Navigator>
-    <HomeStack.Screen name="Home" component={Home} />            
-    <HomeStack.Screen name="Profile" component={Profile} />
+      <HomeStack.Group>
+        <HomeStack.Screen name="Home" component={Home} />
+        <HomeStack.Screen name="Profile" component={Profile} />
+      </HomeStack.Group>
     </HomeStack.Navigator>
   );
 }
@@ -38,10 +41,12 @@ const AppointmentStack = createNativeStackNavigator();
 function AppointmentStackScreen() {
   return (
     <AppointmentStack.Navigator>
-    <AppointmentStack.Screen name="Appointment" component={Appointment} />            
-    <AppointmentStack.Screen name="AddAppointment" component={AddAppointment} />
-    <AppointmentStack.Screen name="AddPatient" component={AddPatient} />
-    <AppointmentStack.Screen name="History" component={History} />
+      <AppointmentStack.Group>
+        <AppointmentStack.Screen name="Appointment" component={Appointment} />
+        <AppointmentStack.Screen name="AddAppointment" component={AddAppointment} />
+        <AppointmentStack.Screen name="AddPatient" component={AddPatient} />
+        <AppointmentStack.Screen name="History" component={History} />
+      </AppointmentStack.Group>
     </AppointmentStack.Navigator>
   );
 }
@@ -49,9 +54,11 @@ const PatientStack = createNativeStackNavigator();
 function PatientStackScreen() {
   return (
     <PatientStack.Navigator>
-    <PatientStack.Screen name="Patient" component={Patient} />            
-    <PatientStack.Screen name="History" component={History} />
-    <PatientStack.Screen name="AddPatient" component={AddPatient} />
+      <PatientStack.Group>
+        <PatientStack.Screen name="Patient" component={Patient} />
+        <PatientStack.Screen name="History" component={History} />
+        <PatientStack.Screen name="EditHistory" component={EditHistory} />
+      </PatientStack.Group>
     </PatientStack.Navigator>
   );
 }
@@ -59,8 +66,10 @@ const CriticalStack = createNativeStackNavigator();
 function CriticalStackScreen() {
   return (
     <CriticalStack.Navigator>
-    <CriticalStack.Screen name="Critical" component={Critical} />            
-    <CriticalStack.Screen name="CriticalProfile" component={CriticalProfile} />            
+      <CriticalStack.Group>
+        <CriticalStack.Screen name="Critical" component={Critical} />
+        <CriticalStack.Screen name="CriticalProfile" component={CriticalProfile} />
+      </CriticalStack.Group>
     </CriticalStack.Navigator>
   );
 }
@@ -70,24 +79,24 @@ export default function App() {
 
   return (
     <NavigationContainer>
-    <Tab.Navigator
-      initialRouteName="Home"
-      activeColor="black"
-      labelStyle={{ fontSize: 12 }}
-      style={{ backgroundColor: 'black' }}
-    >
-      <Tab.Screen
-        name="Home"
-        component={HomeStackScreen}
-        options={{
-          tabBarLabel: 'Home',
-          tabBarIcon: ({ color }) => (
-            <AntDesign name="home" size={26} color="{color}" />
-          ),
-        }}
-      />
-        <Tab.Screen 
-          name="Appointments" 
+      <Tab.Navigator
+        initialRouteName="Patient"
+        activeColor="black"
+        labelStyle={{ fontSize: 12 }}
+        style={{ backgroundColor: 'black' }}
+      >
+        <Tab.Screen
+          name="Home"
+          component={HomeStackScreen}
+          options={{
+            tabBarLabel: 'Home',
+            tabBarIcon: ({ color }) => (
+              <AntDesign name="home" size={26} color="{color}" />
+            ),
+          }}
+        />
+        <Tab.Screen
+          name="Appointments"
           component={AppointmentStackScreen}
           options={{
             tabBarLabel: 'Appointment',
@@ -96,25 +105,25 @@ export default function App() {
             ),
           }}
         />
-        <Tab.Screen 
-          name="Patient" 
-          component={PatientStackScreen} 
+        <Tab.Screen
+          name="Patient"
+          component={PatientStackScreen}
           options={{
-          tabBarLabel: 'Patient',
-          tabBarIcon: ({ color }) => (
-            <AntDesign name="addusergroup" size={26} color="{color}" />
-          ),
-        }}
+            tabBarLabel: 'Patient',
+            tabBarIcon: ({ color }) => (
+              <AntDesign name="addusergroup" size={26} color="{color}" />
+            ),
+          }}
         />
-        <Tab.Screen 
-          name="Critical" 
-          component={CriticalStackScreen} 
+        <Tab.Screen
+          name="Critical"
+          component={CriticalStackScreen}
           options={{
-          tabBarLabel: 'Critical',
-          tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons name="alert-rhombus-outline" size={26} color="{color}" />
-          ),
-        }}
+            tabBarLabel: 'Critical',
+            tabBarIcon: ({ color }) => (
+              <MaterialCommunityIcons name="alert-rhombus-outline" size={26} color="{color}" />
+            ),
+          }}
         />
       </Tab.Navigator>
     </NavigationContainer>
