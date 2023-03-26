@@ -1,9 +1,8 @@
 import React from 'react'
 import { useFonts } from 'expo-font';
-import { View, Text } from 'react-native'
-import { AntDesign } from '@expo/vector-icons';
+import { View, TextInput } from 'react-native';
 
-export default function card({ tabName }) {
+export default function card() {
 
     const [fontsLoaded] = useFonts({
         'Poppins-Medium': require('../assets/fonts/Poppins-Medium.ttf'),
@@ -17,14 +16,11 @@ export default function card({ tabName }) {
         return null;
     }
     return (
-        <View className=" flex-row pb-6 ">
-            <View className="flex justify-center items-center mx-6 h-[50px] w-[50px] bg-white rounded-xl">
-                <AntDesign className="flex item-center" name="arrowleft" size={30} color="black" />
+        <View className="m-4">
+            <View className="bg-white h-[100px] p-3 rounded-[15px]">
+                <TextInput placeholder='Add Details' keyboardType='default' className="text-[14px]" style={{ opacity: 0.4, fontFamily: 'Poppins-Medium' }} />
             </View>
-            <View className="flex items-center justify-center ">
-                <Text className="text-[20px]" style={{ fontFamily: 'Poppins-Medium' }} >{tabName}</Text>
-            </View>
-
         </View>
+
     )
 }

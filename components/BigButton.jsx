@@ -1,16 +1,30 @@
-import { View, Text, Image, } from 'react-native'
 import React from 'react'
+import { useFonts } from 'expo-font';
+import { View, Text, Image, } from 'react-native'
 
 
-export default function card() {
+export default function card({input, color}) {
+
+    const [fontsLoaded] = useFonts({
+        'Poppins-Medium': require('../assets/fonts/Poppins-Medium.ttf'),
+        'Poppins-Bold': require('../assets/fonts/Poppins-Bold.ttf'),
+        'Poppins-Regular': require('../assets/fonts/Poppins-Regular.ttf'),
+        'Poppins-SemiBold': require('../assets/fonts/Poppins-SemiBold.ttf'),
+        'Poppins-Light': require('../assets/fonts/Poppins-Light.ttf'),
+    });
+
+    if (!fontsLoaded) {
+        return null;
+    }
     return (
 
-        <View className="flex justify-center m-2 h-[75px] bg-Primary-Orange/25 rounded-lg">
-            <Text className="text-center text-[18px] text-Primary-Orange">
-                View Live Status Under Critical Care
+        <View className={`flex justify-center m-2 h-[75px] bg-Primary-${color} rounded-[15px]`}>
+            <Text className="text-center text-[18px] text-white" style={{fontFamily: 'Poppins-Medium' }} >
+                {input}
             </Text>
-
         </View>
-
     )
 }
+
+// to use ...    
+// <BigButton input='close Appointment' color='Purple'/>

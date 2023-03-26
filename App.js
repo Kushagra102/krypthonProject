@@ -80,7 +80,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <Tab.Navigator
-        initialRouteName="Appointments"
+        initialRouteName="Critical"
         activeColor="black"
         labelStyle={{ fontSize: 12 }}
         style={{ backgroundColor: 'black' }}
