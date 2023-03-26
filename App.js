@@ -1,7 +1,6 @@
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { Text, View } from 'react-native'
-import Home from "./screens/Home"
 import { NativeWindStyleSheet } from "nativewind";
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -12,10 +11,6 @@ NativeWindStyleSheet.setOutput({
 });
 
 const Stack = createNativeStackNavigator();
-
-import { createAppContainer , createSwitchNavigator} from 'react-navigation';
-import { createStackNavigator } from 'react-navigation-stack';
-import { createMaterialBottomTabNavigator } from 'react-navigation-material-bottom-tabs';
 
 import Home from "./screens/Home"
 import Profile from "./screens/Profile"
