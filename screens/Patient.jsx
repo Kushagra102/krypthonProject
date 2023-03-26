@@ -28,11 +28,13 @@ export default function App({ navigate }) {
     return null;
   }
 
-  return (
+  return <>
     <SafeAreaView className="bg-{#F1F6FA} pt-4">
-        <BackButton tabName='Patients' />
-        <SearchBar />
-        <ScrollView>
+      <BackButton tabName='Patients' />
+      <SearchBar />
+    </SafeAreaView>
+    <View>
+      <ScrollView>
 
 
         <View className="flex flex-row justify-between mx-10 pt-3 pb-1 items-center">
@@ -40,6 +42,7 @@ export default function App({ navigate }) {
           <Text className="text-[15px]" style={{ fontFamily: 'Poppins-Regular' }}>Clinic</Text>
           <Text className="text-[15px]" style={{ fontFamily: 'Poppins-Regular' }}>Hospital #1</Text>
           <Text className="text-[15px]" style={{ fontFamily: 'Poppins-Regular' }}>Hospital #2</Text>
+
         </View>
           <View className="bg-Primary-Green h-[2.5px] mx-4 w-[70px]"></View>
 
@@ -48,18 +51,18 @@ export default function App({ navigate }) {
           <Text className="text-[13px]" style={{ fontFamily: 'Poppins-Regular' }}>See All</Text>
         </View>
 
-        <Card colorFont="#F0A04B" colorBack="#FFFFFF" para1="79 bpm | 98% O2" name="Plarck Cacil" para2="View" image="https://links.papareact.com/wru" />
-        <Card colorFont="#F0A04B" colorBack="#FFFFFF" para1="79 bpm | 98% O2" name="Plarck Cacil" para2="View" image="https://links.papareact.com/wru" />
-        <Card colorFont="#F0A04B" colorBack="#FFFFFF" para1="79 bpm | 98% O2" name="Plarck Cacil" para2="View" image="https://links.papareact.com/wru" />
+        <Card borderColor="#BFE8E3" colorView="#BFE8E3" colorFont="#01A48F" colorBack="#FFFFFF" para1="79 bpm | 98% O2" name="Plarck Cacil" para2="View" image="https://links.papareact.com/wru" />
+        <Card borderColor="#FCE4C9" colorView="#FCE4C9" colorFont="#F0A04B" colorBack="#FFFFFF" para1="79 bpm | 98% O2" name="Plarck Cacil" para2="View" image="https://links.papareact.com/wru" />
+        <Card borderColor="#BFE8E3" colorView="#BFE8E3" colorFont="#01A48F" colorBack="#FFFFFF" para1="79 bpm | 98% O2" name="Plarck Cacil" para2="View" image="https://links.papareact.com/wru" />
 
         <View className="flex flex-row justify-between mx-5 py-3 items-center">
           <Text className="text-[16px]" style={{ fontFamily: 'Poppins-Regular' }}>Past Patients</Text>
           <Text className="text-[13px]" style={{ fontFamily: 'Poppins-Regular' }}>See All</Text>
         </View>
 
-        <Card colorFont="#F0A04B" colorBack="#FFFFFF" para1="79 bpm | 98% O2" name="Plarck Cacil" para2="View" image="https://links.papareact.com/wru" />
-        <Card colorFont="#F0A04B" colorBack="#FFFFFF" para1="79 bpm | 98% O2" name="Plarck Cacil" para2="View" image="https://links.papareact.com/wru" />
-        <Card colorFont="#F0A04B" colorBack="#FFFFFF" para1="79 bpm | 98% O2" name="Plarck Cacil" para2="View" image="https://links.papareact.com/wru" />
+        <Card borderColor="#FCE4C9" colorView="#FCE4C9" colorFont="#F0A04B" colorBack="#FFFFFF" para1="79 bpm | 98% O2" name="Plarck Cacil" para2="View" image="https://links.papareact.com/wru" />
+        <Card borderColor="#BFE8E3" colorView="#BFE8E3" colorFont="#01A48F" colorBack="#FFFFFF" para1="79 bpm | 98% O2" name="Plarck Cacil" para2="View" image="https://links.papareact.com/wru" />
+        <Card borderColor="#FCE4C9" colorView="#FCE4C9" colorFont="#F0A04B" colorBack="#FFFFFF" para1="79 bpm | 98% O2" name="Plarck Cacil" para2="View" image="https://links.papareact.com/wru" />
 
 
         <Button
@@ -71,8 +74,8 @@ export default function App({ navigate }) {
           onPress={() => navigation.navigate('AddPatient')}
         />
       </ScrollView>
-    </SafeAreaView>
-  );
+    </View>
+  </>
 };
 
 
