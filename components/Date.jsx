@@ -1,9 +1,6 @@
-import { StatusBar } from 'expo-status-bar';
-import { Text, View, Button, TouchableOpacity, Image } from 'react-native';
+import { Text, View} from 'react-native';
 import { useNavigation } from '@react-navigation/native'
 import React, { useLayoutEffect } from 'react'
-import { SafeAreaView } from 'react-native-safe-area-context';
-import { AntDesign } from '@expo/vector-icons';
 import { useFonts } from 'expo-font';
 
 

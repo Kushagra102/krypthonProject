@@ -18,7 +18,7 @@ export default function card() {
     return (
         <View className="m-4">
             <View className="bg-white h-[100px] p-3 rounded-[15px]">
-                <TextInput placeholder='Add Details' keyboardType='default' className="text-[14px]" style={{ opacity: 0.4, fontFamily: 'Poppins-Medium' }} />
+                <TextInput placeholder='Add Details' keyboardType='default' className="text-[14px]" style={{ fontFamily: 'Poppins-SemiBold' }} />
             </View>
         </View>
 

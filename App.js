@@ -1,6 +1,4 @@
 import React from 'react';
-import { StatusBar } from 'expo-status-bar';
-import { Text, View } from 'react-native'
 import { NativeWindStyleSheet } from "nativewind";
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -80,7 +78,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <Tab.Navigator
-        initialRouteName="Critical"
+        initialRouteName="Home"
         activeColor="black"
         labelStyle={{ fontSize: 12 }}
         style={{ backgroundColor: 'black' }}

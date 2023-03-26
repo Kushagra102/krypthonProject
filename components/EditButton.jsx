@@ -1,9 +1,19 @@
 import React from 'react'
 import { useFonts } from 'expo-font';
-import { View, Text } from 'react-native'
+import { View, Text, TouchableOpacity } from 'react-native'
 import { Feather } from '@expo/vector-icons';
 import { AntDesign } from '@expo/vector-icons';
+import { useNavigation } from '@react-navigation/native'
+import { useLayoutEffect } from 'react'
+
 export default function card({ tabName }) {
+    const navigation = useNavigation();
+
+    useLayoutEffect(() => {
+      navigation.setOptions({
+        headerShown: false,
+      })
+    }, [])
 
     const [fontsLoaded] = useFonts({
         'Poppins-Medium': require('../assets/fonts/Poppins-Medium.ttf'),
@@ -19,9 +29,11 @@ export default function card({ tabName }) {
     return (
         <View className=" flex-row pb-7 justify-between ">
             <View className="justify-start">
-                <View className="flex justify-center items-center mx-6 h-[50px] w-[50px] bg-white rounded-xl">
-                    <AntDesign className="flex item-center" name="arrowleft" size={30} color="black" />
-                </View>
+                <TouchableOpacity onPress={() => navigation.goBack()}>
+                    <View className="flex justify-center items-center mx-6 h-[50px] w-[50px] bg-white rounded-xl">
+                        <AntDesign className="flex item-center" name="arrowleft" size={30} color="black" />
+                    </View>
+                </TouchableOpacity>
             </View>
             <View className="flex items-center justify-center ">
                 <Text className="text-[20px]" style={{ fontFamily: 'Poppins-Medium' }} >{tabName}</Text>

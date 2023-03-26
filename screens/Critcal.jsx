@@ -7,9 +7,8 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import PlusButton from '../components/PlusButton'
 import SearchBar from '../components/SearchBar'
 import Card from '../components/Card';
-import DescriptionBox from '../components/DescriptionBox'
-import BigButton from '../components/BigButton'
-export default function App({ navigate }) {
+
+export default function App() {
   const navigation = useNavigation();
 
   useLayoutEffect(() => {

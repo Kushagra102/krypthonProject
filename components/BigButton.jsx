@@ -1,6 +1,6 @@
 import React from 'react'
 import { useFonts } from 'expo-font';
-import { View, Text, Image, } from 'react-native'
+import { View, Text} from 'react-native'
 
 
 export default function card({input, color}) {
@@ -18,7 +18,7 @@ export default function card({input, color}) {
     }
     return (
 
-        <View className={`flex justify-center m-2 h-[75px] bg-Primary-${color} rounded-[15px]`}>
+        <View className={`flex justify-center mx-5 h-[62px] mb-2 bg-Primary-${color} rounded-[15px]`}>
             <Text className="text-center text-[18px] text-white" style={{fontFamily: 'Poppins-Medium' }} >
                 {input}
             </Text>

@@ -1,8 +1,8 @@
-import { View, Text, Image, TextInput, ScrollView, Button, TouchableOpacity } from 'react-native'
+import { View, Text, Image, ScrollView, Button, TouchableOpacity } from 'react-native'
 import React, { useLayoutEffect } from 'react'
 import { useNavigation } from '@react-navigation/native'
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { MagnifyingGlassIcon, AdjustmentsVerticalIcon, ArrowRightIcon } from 'react-native-heroicons/outline'
+import { ArrowRightIcon } from 'react-native-heroicons/outline'
 import { useFonts } from 'expo-font';
 import HomeCard from '../components/HomeCard';
 import UpcomingCard from '../components/UpcomingCard';

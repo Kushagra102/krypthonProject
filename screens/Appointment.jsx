@@ -1,5 +1,4 @@
-import { StatusBar } from 'expo-status-bar';
-import { Text, View, Button, TouchableOpacity, Image } from 'react-native';
+import { Text, View, TouchableOpacity, Image } from 'react-native';
 import { useNavigation } from '@react-navigation/native'
 import React, { useLayoutEffect } from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context';

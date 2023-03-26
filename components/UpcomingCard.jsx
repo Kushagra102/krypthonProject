@@ -1,4 +1,4 @@
-import { View, Text, Image, TextInput, ScrollView } from 'react-native'
+import { View, Text} from 'react-native'
 import { useFonts } from 'expo-font';
 
 

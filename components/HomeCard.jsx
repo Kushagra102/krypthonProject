@@ -1,4 +1,4 @@
-import { View, Text, Image, TextInput, ScrollView } from 'react-native'
+import { View, Text, Image} from 'react-native'
 import { useFonts } from 'expo-font';
 
 function HomeCard({ colorBack, colorFont, para1, para2, para3, name1, name2, image1, image2 }) {

@@ -6,8 +6,10 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { AntDesign } from '@expo/vector-icons';
 import { useFonts } from 'expo-font';
 import Date from '../components/Date';
-import Card from '../components/Card';
 import BackButton from '../components/BackButton';
+import BigButton from '../components/BigButton'
+import PatientDetails from '../components/PatientDetails';
+import Time from '../components/Time';
 
 export default function App() {
   const navigation = useNavigation();
@@ -34,7 +36,9 @@ export default function App() {
     <View>
       <ScrollView>
         <SafeAreaView className="pt-5">
-          <BackButton tabName="Schedule Appointment" />
+          <TouchableOpacity onPress={() => navigation.goBack()}>
+            <BackButton tabName="Schedule Appointment" />
+          </TouchableOpacity>
         </SafeAreaView>
 
         {/* March date */}
@@ -59,74 +63,16 @@ export default function App() {
         </View>
 
         {/* Time */}
-
-        <View className="mt-3 flex flex-col">
-          <View className="mx-5 flex flex-row justify-between items-center mb-3">
-            <View className="h-[40] w-[80] rounded-[10px] bg-transparent border-gray-600 border-0.5 items-center justify-center">
-              <Text className="text-[14px] pt-1" style={{ fontFamily: "Poppins-Medium" }}>11:00AM</Text>
-            </View>
-            <View className="h-[40] w-[80] rounded-[10px] bg-Primary-Purple border-gray-600 border-0.5 items-center justify-center">
-              <Text className="text-[14px] pt-1 text-white" style={{ fontFamily: "Poppins-Medium" }}>11:00AM</Text>
-            </View>
-            <View className="h-[40] w-[80] rounded-[10px] bg-transparent border-gray-600 border-0.5 items-center justify-center">
-              <Text className="text-[14px] pt-1" style={{ fontFamily: "Poppins-Medium" }}>11:00AM</Text>
-            </View>
-            <View className="h-[40] w-[80] rounded-[10px] bg-transparent border-gray-600 border-0.5 items-center justify-center">
-              <Text className="text-[14px] pt-1" style={{ fontFamily: "Poppins-Medium" }}>11:00AM</Text>
-            </View>
-          </View>
-          <View className="mx-5 flex flex-row justify-between items-center mb-3">
-            <View className="h-[40] w-[80] rounded-[10px] bg-transparent border-gray-600 border-0.5 items-center justify-center">
-              <Text className="text-[14px] pt-1" style={{ fontFamily: "Poppins-Medium" }}>11:00AM</Text>
-            </View>
-            <View className="h-[40] w-[80] rounded-[10px] bg-transparent border-gray-600 border-0.5 items-center justify-center">
-              <Text className="text-[14px] pt-1" style={{ fontFamily: "Poppins-Medium" }}>11:00AM</Text>
-            </View>
-            <View className="h-[40] w-[80] rounded-[10px] bg-transparent border-gray-600 border-0.5 items-center justify-center">
-              <Text className="text-[14px] pt-1" style={{ fontFamily: "Poppins-Medium" }}>11:00AM</Text>
-            </View>
-            <View className="h-[40] w-[80] rounded-[10px] bg-transparent border-gray-600 border-0.5 items-center justify-center">
-              <Text className="text-[14px] pt-1" style={{ fontFamily: "Poppins-Medium" }}>11:00AM</Text>
-            </View>
-          </View>
-        </View>
+        <Time />
 
         {/* Patient Details */}
+        <PatientDetails />
 
-        <View className="flex pt-2">
-          <View className="flex flex-row mx-5 items-center">
-            <Text className="mr-1 text-[18px]" style={{ fontFamily: 'Poppins-Medium' }}>Patient Details</Text>
-          </View>
-        </View>
 
-        <View>
-          <View className="mx-5 flex flex-col mb-3">
-            <Text className="text-[14px] text-black mt-1 mb-2" style={{ fontFamily: 'Poppins-SemiBold' }}>Full Name</Text>
-            <TextInput placeholder='Add Details...' keyboardType='default' className="flex bg-white text-[14px] text-black mx-2 w-[360] h-[40] rounded-[10px] pl-4 justify-center items-center" style={{ fontFamily: 'Poppins-SemiBold' }} />
-          </View>
-          <View className="mx-5 flex flex-col mb-3">
-            <Text className="text-[14px] text-black mt-1 mb-2" style={{ fontFamily: 'Poppins-SemiBold' }}>Age</Text>
-            <TextInput placeholder='Add Details...' keyboardType='default' className="flex bg-white text-[14px] text-black mx-2 w-[360] h-[40] rounded-[10px] pl-4 justify-center items-center" style={{ fontFamily: 'Poppins-SemiBold' }} />
-          </View>
-          <View className="mx-5 flex flex-col mb-3">
-            <Text className="text-[14px] text-black mt-1 mb-2" style={{ fontFamily: 'Poppins-SemiBold' }}>Age</Text>
-            <View className="flex flex-row space-x-2">
-              <View className="h-[40] w-[80] rounded-[10px] bg-Primary-Purple border-gray-600 border-0.5 items-center justify-center">
-                <Text className="text-white" style={{fontFamily: "Poppins-SemiBold"}}>Male</Text>
-              </View>
-              <View className="h-[40] w-[80] rounded-[10px] bg-transparent border-gray-600 border-0.5 items-center justify-center">
-                <Text className="text-black" style={{fontFamily: "Poppins-SemiBold"}}>Femal</Text>
-              </View>
-              <View className="h-[40] w-[80] rounded-[10px] bg-transparent border-gray-600 border-0.5 items-center justify-center">
-                <Text className="text-black" style={{fontFamily: "Poppins-SemiBold"}}>Other</Text>
-              </View>
-            </View>
-          </View>
-          <View className="mx-5 flex flex-col mb-3">
-            <Text className="text-[14px] text-black mt-1 mb-2" style={{ fontFamily: 'Poppins-SemiBold' }}>Problem Description</Text>
-            <TextInput placeholder='Write your problem....' keyboardType='default' className="flex bg-white text-[14px] text-black mx-2 w-[360] h-[98] rounded-[10px] pl-4 justify-start items-start" style={{ fontFamily: 'Poppins-SemiBold' }} />
-          </View>
-        </View>
+        <TouchableOpacity onPress={() => navigation.navigate('Home')}>
+          <BigButton input='Schedule Appointment' color='Purple' />
+        </TouchableOpacity>
+
       </ScrollView>
     </View>
   </>
