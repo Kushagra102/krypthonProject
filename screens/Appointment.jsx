@@ -47,11 +47,19 @@ export default function App() {
         </View>
       </View>
     </SafeAreaView>
-    <View className="flex-col pb-3 mx-5 pt-5">
+    <View className="flex-col pb-2 mx-5 pt-5">
       <Text className="flex text-[22px] leading-6" style={{ fontFamily: 'Poppins-Regular' }}>Good Morning, Dr.Adam</Text>
       <Text className="flex text-[22px] leading-7" style={{ fontFamily: 'Poppins-Regular' }}>You have
         <Text className="text-Primary-Purple" style={{ fontFamily: 'Poppins-Bold', }}> 3</Text> Appointments today</Text>
     </View>
+
+    <View className="flex flex-row justify-between mx-10 py-1 items-center">
+      <Text className="text-[15px]" style={{ fontFamily: 'Poppins-Bold' }}>All</Text>
+      <Text className="text-[15px]" style={{ fontFamily: 'Poppins-Bold' }}>Clinic</Text>
+      <Text className="text-[15px]" style={{ fontFamily: 'Poppins-Bold' }}>Hospital 1</Text>
+      <Text className="text-[15px]" style={{ fontFamily: 'Poppins-Bold' }}>Hospital 2</Text>
+    </View>
+    <View className="bg-Primary-Purple h-[2.5px] mx-6 w-[55px] "></View>
     <Date />
     <Card borderColor="#946DF5" colorFont="#946DF5" colorView="#E4DAFD" colorBack="#FFFFFF" para1="11 AM | Hospital 1" name="Plarck Cacil" para2="History" image="https://links.papareact.com/wru" />
     <Card borderColor="#946DF5" colorFont="#946DF5" colorView="#E4DAFD" colorBack="#FFFFFF" para1="10 AM | Clinic" name="Plarck Cacil" para2="OnGoing" image="https://links.papareact.com/wru" />

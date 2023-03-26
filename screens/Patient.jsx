@@ -42,7 +42,6 @@ export default function App({ navigate }) {
           <Text className="text-[15px]" style={{ fontFamily: 'Poppins-Regular' }}>Clinic</Text>
           <Text className="text-[15px]" style={{ fontFamily: 'Poppins-Regular' }}>Hospital #1</Text>
           <Text className="text-[15px]" style={{ fontFamily: 'Poppins-Regular' }}>Hospital #2</Text>
-
         </View>
 
         <View className="flex flex-row justify-between mx-5 py-3 items-center">
