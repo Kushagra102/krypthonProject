@@ -1,4 +1,4 @@
-import { View, Text, Image, TextInput, ScrollView ,Button } from 'react-native'
+import { View, Text, Image, TextInput, ScrollView, Button, TouchableOpacity } from 'react-native'
 import React, { useLayoutEffect } from 'react'
 import { useNavigation } from '@react-navigation/native'
 import { SafeAreaView } from 'react-native-safe-area-context';
@@ -38,9 +38,11 @@ export default function App() {
             <Text className="text-[24px] " style={{ fontFamily: 'Poppins-Medium' }}>Dr. Adam Willams</Text>
           </View>
 
-          <Image source={{
-            uri: 'https://links.papareact.com/wru',
-          }} className="h-[60px] w-[60px]  bg-gray-300 p-4 rounded-full" />
+          <TouchableOpacity onPress={() => navigation.navigate('Profile')}>
+            <Image source={{
+              uri: 'https://links.papareact.com/wru',
+            }} className="h-[60px] w-[60px]  bg-gray-300 p-4 rounded-full" />
+          </TouchableOpacity>
         </View>
 
         {/* Search */}
@@ -110,19 +112,16 @@ export default function App() {
         <UpcomingCard f1="Transfer Patient" f2="Doctor Tools" f3="Order Equipments" />
 
 
-
-
-
+        <Button
+          title="Go to Profile"
+          onPress={() => navigation.navigate('Profile')}
+        />
 
       </ScrollView>
     </SafeAreaView>
 
 
-    
-    <Button
-        title="Go to Profile"
-        onPress={() => navigation.navigate('Profile')}
-      />
-    </>;
+
+  </>;
 };
 

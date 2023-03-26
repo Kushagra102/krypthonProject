@@ -18,7 +18,6 @@ export default function card() {
                     <Text className="text-center text-Primary-Purple">
                         OnGoing
                     </Text>
-
                 </View>
             </View>
         </View>
