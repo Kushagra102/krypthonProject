@@ -38,14 +38,14 @@ export default function App({ navigate }) {
       <ScrollView>
 
 
-        <View className="flex flex-row justify-between mx-10 pb-1 items-center">
+        <View className="flex flex-row justify-between pt-7 mx-10 pb-1 items-center">
           <Text className="text-[15px]" style={{ fontFamily: 'Poppins-Bold' }}>All</Text>
           <Text className="text-[15px]" style={{ fontFamily: 'Poppins-Bold' }}>Clinic</Text>
           <Text className="text-[15px]" style={{ fontFamily: 'Poppins-Bold' }}>Hospital 1</Text>
           <Text className="text-[15px]" style={{ fontFamily: 'Poppins-Bold' }}>Hospital 2</Text>
 
         </View>
-          <View className="bg-Primary-Green h-[2.5px] mx-4 w-[70px]"></View>
+        <View className="bg-Primary-Green h-[2.5px] mx-6 w-[55px] "></View>
 
         <View className="flex flex-row justify-between mx-5 py-3 items-center">
           <Text className="text-[16px]" style={{ fontFamily: 'Poppins-Regular' }}>Today</Text>

@@ -41,9 +41,11 @@ export default function App() {
         </TouchableOpacity>
         <Text className="flex text-[18px]" style={{ fontFamily: 'Poppins-Regular' }}>Mar,2023</Text>
         <View>
-          <View className="flex justify-center items-center h-[50px] w-[50px] bg-white rounded-xl">
-            <AntDesign className="flex item-center" name="plus" size={30} color="black" />
-          </View>
+          <TouchableOpacity onPress={() => navigation.navigate('AddAppointment')}>
+            <View className="flex justify-center items-center h-[50px] w-[50px] bg-white rounded-xl">
+              <AntDesign className="flex item-center" name="plus" size={30} color="black" />
+            </View>
+          </TouchableOpacity>
         </View>
       </View>
     </SafeAreaView>
@@ -61,10 +63,15 @@ export default function App() {
     </View>
     <View className="bg-Primary-Purple h-[2.5px] mx-6 w-[55px] "></View>
     <Date />
-    <Card borderColor="#946DF5" colorFont="#946DF5" colorView="#E4DAFD" colorBack="#FFFFFF" para1="11 AM | Hospital 1" name="Plarck Cacil" para2="History" image="https://links.papareact.com/wru" />
-    <Card borderColor="#946DF5" colorFont="#946DF5" colorView="#E4DAFD" colorBack="#FFFFFF" para1="10 AM | Clinic" name="Plarck Cacil" para2="OnGoing" image="https://links.papareact.com/wru" />
-    <Card borderColor="#946DF5" colorFont="#946DF5" colorView="#E4DAFD" colorBack="#FFFFFF" para1="12AM | Hospital 2" name="Plarck Cacil" para2="History" image="https://links.papareact.com/wru" />
-
+    <TouchableOpacity onPress={() => navigation.navigate('History')}>
+      <Card borderColor="#946DF5" colorFont="#946DF5" colorView="#E4DAFD" colorBack="#FFFFFF" para1="11 AM | Hospital 1" name="Plarck Cacil" para2="History" image="https://links.papareact.com/wru" />
+    </TouchableOpacity>
+    <TouchableOpacity onPress={() => navigation.navigate('AddPatient')}>
+      <Card borderColor="#946DF5" colorFont="#946DF5" colorView="#E4DAFD" colorBack="#FFFFFF" para1="10 AM | Clinic" name="Plarck Cacil" para2="OnGoing" image="https://links.papareact.com/wru" />
+    </TouchableOpacity>
+    <TouchableOpacity onPress={() => navigation.navigate('History')}>
+      <Card borderColor="#946DF5" colorFont="#946DF5" colorView="#E4DAFD" colorBack="#FFFFFF" para1="12AM | Hospital 2" name="Plarck Cacil" para2="History" image="https://links.papareact.com/wru" />
+    </TouchableOpacity>
 
 
   </>
