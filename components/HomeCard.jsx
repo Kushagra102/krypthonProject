@@ -21,7 +21,7 @@ function HomeCard({ colorBack, colorFont, para1, para2, para3, name1, name2, ima
                 <View className="flex-row pb-3 items-center mx-4 space-x-2">
                     <Image source={{
                         uri:   `${image1}`,
-                    }} className="h-16 w-16 bg-gray-300 p-4 rounded-full" />
+                    }} className="h-14 w-14 bg-gray-300 p-4 rounded-full" />
                     <View className="flex-1">
                         <Text className="text-[17px] px-1 text-black-400" style={{ fontFamily: 'Poppins-Medium' }}>{name1}</Text>
                         <Text className="text-[17px] px-1 text-black-500" style={{ fontFamily: 'Poppins-Light' }}>{para1}</Text>
@@ -36,7 +36,7 @@ function HomeCard({ colorBack, colorFont, para1, para2, para3, name1, name2, ima
                 <View className="flex-row pb-3 pt-2 items-center mx-4 space-x-2">
                     <Image source={{
                         uri:  `${image2}`,
-                    }} className="h-16 w-16 bg-black-300 p-4 rounded-full" />
+                    }} className="h-14 w-14 bg-black-300 p-4 rounded-full" />
                     <View className="flex-1">
                     <Text className="text-[17px] px-1 text-black-400" style={{ fontFamily: 'Poppins-Medium' }}>{name2}</Text>
                         <Text className="text-[17px] px-1 text-black-500" style={{ fontFamily: 'Poppins-Light' }}>{para2}</Text>

@@ -21,7 +21,7 @@ function Card({ colorBack, colorFont, para1, para2, name, image, colorView, bord
                 <View className="flex-row pb-3 items-center mx-4 space-x-2">
                     <Image source={{
                         uri: `${image}`,
-                    }} className="h-16 w-16 bg-gray-300 p-4 rounded-full" />
+                    }} className="h-14 w-14 bg-gray-300 p-4 rounded-full" />
                     <View className="flex-1">
                         <Text className="text-[17px] px-1 text-black-400" style={{ fontFamily: 'Poppins-Medium' }}>{name}</Text>
                         <Text clasfsName="text-[17px] px-1 text-black-500" style={{ fontFamily: 'Poppins-Light' }}>{para1}</Text>

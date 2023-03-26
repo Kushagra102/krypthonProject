@@ -29,7 +29,7 @@ function Date() {
     }
 
     return <>
-        <View className="flex-row pb-2 mx-6 pt-5 justify-between">
+        <View className="flex-row pb-3 mx-6 pt-4 justify-between">
             <View className="flex bg-white w-[44] h-[56] items-center justify-center rounded-[15px]">
                 <Text className="text-[13px] leading-4 pt-2 " style={{ fontFamily: 'Poppins-Regular', }}>Mon</Text>
                 <Text className="text-[13px] leading-7" style={{ fontFamily: 'Poppins-Bold', }}>26</Text>
