@@ -9,7 +9,6 @@ import Date from '../components/Date';
 import Card from '../components/Card';
 
 
-
 export default function App() {
   const navigation = useNavigation();
 
@@ -54,6 +53,10 @@ export default function App() {
         <Text className="text-Primary-Purple" style={{ fontFamily: 'Poppins-Bold', }}> 3</Text> Appointments today</Text>
     </View>
     <Date />
+    <Card borderColor="#946DF5" colorFont="#946DF5" colorView="#E4DAFD" colorBack="#FFFFFF" para1="11 AM | Hospital 1" name="Plarck Cacil" para2="History" image="https://links.papareact.com/wru" />
+    <Card borderColor="#946DF5" colorFont="#946DF5" colorView="#E4DAFD" colorBack="#FFFFFF" para1="10 AM | Clinic" name="Plarck Cacil" para2="OnGoing" image="https://links.papareact.com/wru" />
+    <Card borderColor="#946DF5" colorFont="#946DF5" colorView="#E4DAFD" colorBack="#FFFFFF" para1="12AM | Hospital 2" name="Plarck Cacil" para2="History" image="https://links.papareact.com/wru" />
+
 
 
   </>

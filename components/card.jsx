@@ -1,7 +1,7 @@
 import { View, Text, Image } from 'react-native'
 import { useFonts } from 'expo-font';
 
-function Card({ colorBack, colorFont, para1, para2, name, image }) {
+function Card({ colorBack, colorFont, para1, para2, name, image, colorView, borderColor }) {
 
     const [fontsLoaded] = useFonts({
         'Poppins-Medium': require('../assets/fonts/Poppins-Medium.ttf'),
@@ -26,7 +26,7 @@ function Card({ colorBack, colorFont, para1, para2, name, image }) {
                         <Text className="text-[17px] px-1 text-black-400" style={{ fontFamily: 'Poppins-Medium' }}>{name}</Text>
                         <Text clasfsName="text-[17px] px-1 text-black-500" style={{ fontFamily: 'Poppins-Light' }}>{para1}</Text>
                     </View>
-                    <View className="flex justify-center rounded-lg w-[80px] h-[30px] bg-Primary-${colorFont} border border-[#F49229]/25">
+                    <View className="flex justify-center rounded-lg w-[80px] h-[30px]" style={{backgroundColor: colorView, borderColor: borderColor}}>
                         <Text className="text-center" style={{ color: colorFont }}>
                             {para2}
                         </Text>
