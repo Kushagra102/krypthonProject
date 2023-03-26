@@ -50,7 +50,7 @@ export default function App() {
         <SearchBar />
 
         {/*Upcoming Appointments*/}
-        <View className="pt-2 pb-2">
+        <View className="pt-5 pb-2">
           <View className="flex items-centers space-x-2 pb-2 mx-4 pt-3 rounded-[15px] h-[140] bg-purple-500/70">
             <View className="flex-row space-x-[125] px-3  ">
               <Text className="text-[16px] text-white" style={{ fontFamily: 'Poppins-SemiBold' }}>Upcoming Appointments</Text>

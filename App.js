@@ -54,7 +54,7 @@ const PatientStack = createNativeStackNavigator();
 function PatientStackScreen() {
   return (
     <PatientStack.Navigator>
-      <PatientStack.Group>
+      <PatientStack.Group >
         <PatientStack.Screen name="Patient" component={Patient} />
         <PatientStack.Screen name="History" component={History} />
         <PatientStack.Screen name="EditHistory" component={EditHistory} />
