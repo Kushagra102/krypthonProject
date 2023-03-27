@@ -36,7 +36,7 @@ export default function App() {
         <View className="flex-row pb-3 items-center mx-4 space-x-2">
           <View className="flex-1">
             <Text className="text-[20px]" style={{ fontFamily: 'Poppins-Regular' }}>Good Morning,</Text>
-            <Text className="text-[24px] " style={{ fontFamily: 'Poppins-Medium' }}>Dr. Adam Willams</Text>
+            <Text className="text-[24px]" style={{ fontFamily: 'Poppins-Medium' }}>Dr. Adam Willams</Text>
           </View>
 
           <TouchableOpacity onPress={() => navigation.navigate('Profile')}>
