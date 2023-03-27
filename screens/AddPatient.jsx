@@ -1,12 +1,11 @@
 import { View, Text, Image, ScrollView, Button, TouchableOpacity } from 'react-native'
 import React, { useLayoutEffect } from 'react'
 import { useNavigation } from '@react-navigation/native'
-import { SafeAreaView } from 'react-native-safe-area-context';
-import { ArrowRightIcon } from 'react-native-heroicons/outline'
 import { useFonts } from 'expo-font';
 import PatientDetails from '../components/PatientDetails';
 import HistoryCard from '../components/HistoryCard'
 import Report from '../components/Report';
+
 
 export default function App() {
   const navigation = useNavigation();
